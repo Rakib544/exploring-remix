@@ -19,7 +19,6 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function PostSlug() {
   const { post, html } = useLoaderData() as LoaderData;
-  console.log(html);
   return (
     <main className="mx-auto max-w-4xl">
       <h1 className="my-6 border-b-2 text-center text-3xl">{post.title}</h1>
