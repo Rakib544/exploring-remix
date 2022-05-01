@@ -1,7 +1,12 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
+import styles from "highlight.js/styles/github-dark-dimmed.css";
 import { getPosts } from "../models/post.server";
+
+export const links = () => {
+  return [{ rel: "stylesheet", href: styles }];
+};
 
 type LoaderData = {
   posts: Awaited<ReturnType<typeof getPosts>>;
